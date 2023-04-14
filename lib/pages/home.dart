@@ -5,6 +5,7 @@ import 'package:instagram_redesign_web/global.dart';
 
 import '../widgets/left_side.dart';
 import '../widgets/right_side.dart';
+// import '../widgets/deity_wider.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

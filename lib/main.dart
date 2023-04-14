@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_redesign_web/pages/deity.dart';
 import 'pages/home.dart';
 
 /*

@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:instagram_redesign_web/pages/deity.dart';
 
 import '../global.dart';
 
@@ -46,7 +47,16 @@ class RrightSideState extends State<RightSide> {
                   ),
                 ),
               ),
-            )
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const DeityPage()),
+                );
+              },
+              child: Text('Open New Page'),
+            ),
           ],
         ),
       ),
