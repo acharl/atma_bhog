@@ -57,6 +57,8 @@ class RrightSideState extends State<RightSide> {
     return Container(
       // color: Colors.green,
       // height: 400,
+      margin: const EdgeInsets.only(bottom: 10, top: 80),
+
       child: Column(
         children: [
           const SizedBox(height: 15),
@@ -336,7 +338,7 @@ class RrightSideState extends State<RightSide> {
   Container mostPopular() {
     return Container(
       // color: Colors.red,
-      margin: const EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 10, top: 80),
       // height: 400,
       child: Column(
         children: [
@@ -408,7 +410,7 @@ class RrightSideState extends State<RightSide> {
   Container coursesAndWorkshops() {
     return Container(
       // color: Colors.red,
-      margin: const EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 10, top: 80),
       // height: 400,
       child: Column(
         children: [

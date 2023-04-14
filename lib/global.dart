@@ -1,5 +1,3 @@
-// user data
-
 List userData = [
   {
     "name": "Sonya Leena",
@@ -137,46 +135,79 @@ List userData = [
 
 List mostPopularBhajanData = [
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Sanware Aye Jaiyo",
+    "img": "images/sanware_aye_jaiyo.png",
   },
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Gurudev Daya Karake",
+    "img": "images/gurudev_daya_karake.png",
   },
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Sri Krsna Govinda",
+    "img": "images/sri_krsna_govinda.png",
   },
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Sanware Aye Jaiyo",
+    "img": "images/sanware_aye_jaiyo.png",
   },
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Gurudev Daya Karake",
+    "img": "images/gurudev_daya_karake.png",
   },
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Sri Krsna Govinda",
+    "img": "images/sri_krsna_govinda.png",
   },
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Sanware Aye Jaiyo",
+    "img": "images/sanware_aye_jaiyo.png",
   },
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Gurudev Daya Karake",
+    "img": "images/gurudev_daya_karake.png",
   },
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Sri Krsna Govinda",
+    "img": "images/sri_krsna_govinda.png",
   },
   {
-    "title": "Bhajo Guru Vishwananda",
-    "img": "images/guruji.jpg",
+    "title": "Sanware Aye Jaiyo",
+    "img": "images/sanware_aye_jaiyo.png",
+  },
+  {
+    "title": "Gurudev Daya Karake",
+    "img": "images/gurudev_daya_karake.png",
+  },
+  {
+    "title": "Sri Krsna Govinda",
+    "img": "images/sri_krsna_govinda.png",
+  },
+  {
+    "title": "Sanware Aye Jaiyo",
+    "img": "images/sanware_aye_jaiyo.png",
+  },
+  {
+    "title": "Gurudev Daya Karake",
+    "img": "images/gurudev_daya_karake.png",
+  },
+  {
+    "title": "Sri Krsna Govinda",
+    "img": "images/sri_krsna_govinda.png",
+  },
+  {
+    "title": "Sanware Aye Jaiyo",
+    "img": "images/sanware_aye_jaiyo.png",
+  },
+  {
+    "title": "Gurudev Daya Karake",
+    "img": "images/gurudev_daya_karake.png",
+  },
+  {
+    "title": "Sri Krsna Govinda",
+    "img": "images/sri_krsna_govinda.png",
   },
 ];
+
 List storyData = [
   {
     "name": "Adam Addisin",
@@ -333,8 +364,6 @@ List storyData = [
     "isLive": false,
   },
 ];
-
-// user data
 
 List courseData = [
   {
