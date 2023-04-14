@@ -20,7 +20,7 @@ class RrightSideState extends State<RightSide> {
       child: Container(
         margin: const EdgeInsets.only(top: 10, right: 10, bottom: 10),
         decoration: const BoxDecoration(
-          color: Color(0xFFE1E2E2),
+          color: Color(0xFF0c1421),
           borderRadius: BorderRadius.all(Radius.circular(35)),
         ),
         child: Column(
@@ -39,7 +39,9 @@ class RrightSideState extends State<RightSide> {
                   child: Column(
                     children: [
                       story(),
-                      feed(),
+                      mostPopular(),
+                      coursesAndWorkshops(),
+                      explore(),
                     ],
                   ),
                 ),
@@ -51,7 +53,7 @@ class RrightSideState extends State<RightSide> {
     );
   }
 
-  Container feed() {
+  Container explore() {
     return Container(
       // color: Colors.green,
       // height: 400,
@@ -62,11 +64,11 @@ class RrightSideState extends State<RightSide> {
             padding: const EdgeInsets.symmetric(horizontal: 25),
             alignment: Alignment.centerLeft,
             child: const Text(
-              "Feed",
+              "Explore",
               style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           ),
           StaggeredGrid.count(
@@ -76,7 +78,6 @@ class RrightSideState extends State<RightSide> {
               axisDirection: AxisDirection.down,
               children: [
                 ...List.generate(userData.length, (index) {
-                  
                   return Container(
                     margin: const EdgeInsets.only(
                         top: 10, left: 12, right: 5, bottom: 5),
@@ -127,12 +128,12 @@ class RrightSideState extends State<RightSide> {
                                     backgroundColor: Colors.transparent,
                                     child: Icon(
                                       Icons.more_vert,
-                                      color: Colors.grey,
+                                      color: Color(0xFF192526),
                                       size: 30,
                                     ),
                                   )),
                               Container(
-                                height: 200,
+                                height: 400,
                                 margin: const EdgeInsets.only(
                                   top: 10,
                                   left: 10,
@@ -250,9 +251,10 @@ class RrightSideState extends State<RightSide> {
             padding: const EdgeInsets.symmetric(horizontal: 25),
             alignment: Alignment.centerLeft,
             child: const Text(
-              "Stories",
+              "Bhajans",
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 36,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -274,40 +276,6 @@ class RrightSideState extends State<RightSide> {
                     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ...List.generate(storyData.length, (index) {
-                        if (index == 0) {
-                          return Container(
-                            margin: const EdgeInsets.only(left: 10),
-                            child: Column(
-                              children: [
-                                Stack(
-                                  alignment: Alignment.centerRight,
-                                  children: const [
-                                    CircleAvatar(
-                                      radius: 38,
-                                      backgroundImage:
-                                          AssetImage('images/2m.jpg'),
-                                    ),
-                                    Positioned(
-                                      bottom: -0,
-                                      right: 0,
-                                      child: CircleAvatar(
-                                        radius: 12,
-                                        backgroundColor: Colors.blue,
-                                        child: Icon(
-                                          Icons.add,
-                                          size: 10,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 8),
-                                const Text("Your Story")
-                              ],
-                            ),
-                          );
-                        }
                         return Container(
                           margin: const EdgeInsets.only(left: 20),
                           child: Column(
@@ -316,16 +284,16 @@ class RrightSideState extends State<RightSide> {
                                 alignment: Alignment.center,
                                 children: [
                                   const CircleAvatar(
-                                    radius: 44,
+                                    radius: 80,
                                     backgroundColor:
                                         Color.fromARGB(255, 245, 60, 13),
                                     child: CircleAvatar(
-                                      radius: 41,
+                                      radius: 70,
                                       backgroundColor: Colors.white,
                                     ),
                                   ),
                                   CircleAvatar(
-                                    radius: 38,
+                                    radius: 75,
                                     backgroundImage: AssetImage(
                                       "${storyData[index]["logo"]}",
                                     ),
@@ -348,10 +316,152 @@ class RrightSideState extends State<RightSide> {
                                 ],
                               ),
                               const SizedBox(height: 8),
-                              Text(storyData[index]["firstName"])
+                              Text(
+                                storyData[index]["firstName"],
+                                style: const TextStyle(color: Colors.white),
+                              )
                             ],
                           ),
                         );
+                      })
+                    ],
+                  ),
+                ),
+              )),
+        ],
+      ),
+    );
+  }
+
+  Container mostPopular() {
+    return Container(
+      // color: Colors.red,
+      margin: const EdgeInsets.only(bottom: 10),
+      // height: 400,
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            alignment: Alignment.centerLeft,
+            child: const Text(
+              "Most Popular",
+              style: TextStyle(
+                fontSize: 36,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const SizedBox(height: 15),
+          Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              alignment: Alignment.centerLeft,
+              child: ScrollConfiguration(
+                behavior:
+                    ScrollConfiguration.of(context).copyWith(dragDevices: {
+                  PointerDeviceKind.mouse,
+                  PointerDeviceKind.touch,
+                }, scrollbars: false),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ...List.generate(mostPopularBhajanData.length, (index) {
+                        return Column(
+                          children: [
+                            Container(
+                              height: 150,
+                              width: 225,
+                              margin: const EdgeInsets.only(
+                                  top: 10, left: 12, right: 5, bottom: 5),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        mostPopularBhajanData[index]["img"]),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              mostPopularBhajanData[index]["title"],
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        );
+                      })
+                    ],
+                  ),
+                ),
+              )),
+        ],
+      ),
+    );
+  }
+
+  Container coursesAndWorkshops() {
+    return Container(
+      // color: Colors.red,
+      margin: const EdgeInsets.only(bottom: 10),
+      // height: 400,
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            alignment: Alignment.centerLeft,
+            child: const Text(
+              "Courses and Workshops",
+              style: TextStyle(
+                fontSize: 36,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const SizedBox(height: 15),
+          Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              alignment: Alignment.centerLeft,
+              child: ScrollConfiguration(
+                behavior:
+                    ScrollConfiguration.of(context).copyWith(dragDevices: {
+                  PointerDeviceKind.mouse,
+                  PointerDeviceKind.touch,
+                }, scrollbars: false),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ...List.generate(courseData.length, (index) {
+                        return Container(
+                            height: 250,
+                            width: 416,
+                            margin: const EdgeInsets.only(
+                                top: 10, left: 16, right: 5, bottom: 5),
+                            child: Container(
+                              // margin: const EdgeInsets.only(
+                              //   top: 10,
+                              //   left: 10,
+                              //   right: 10,
+                              //   bottom: 0,
+                              // ),
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(courseData[index]["img"]),
+                                  fit: BoxFit.cover,
+                                ),
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(24)),
+                              ),
+                            ));
                       })
                     ],
                   ),
@@ -384,10 +494,10 @@ class RrightSideState extends State<RightSide> {
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(24)),
             ),
-            child: Row(children: const [
+            child: const Row(children: [
               Icon(
                 Icons.search_outlined,
-                color: Colors.grey,
+                color: Color(0xFF192526),
                 size: 20,
               ),
               SizedBox(

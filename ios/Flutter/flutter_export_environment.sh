@@ -1,9 +1,9 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\flutter"
-export "FLUTTER_APPLICATION_PATH=D:\FLUTTER PROJECTS WIN 11\instagram_redesign_web"
+export "FLUTTER_ROOT=/Users/sahadev/SEVA/IT/flutter"
+export "FLUTTER_APPLICATION_PATH=/Users/sahadev/SEVA/IT/Instagram-Redesign-Web-Version"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=lib\main.dart"
+export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"
